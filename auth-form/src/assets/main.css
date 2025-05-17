@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* Define theme variables */
+@theme {
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-secondary: #10b981;
+  --color-secondary-hover: #059669;
+  --color-accent: #8b5cf6;
+  --color-accent-hover: #7c3aed;
+  --color-warning: #f87171;
+  --color-light: #f8fafc;
+  --color-dark: #334155;
+}
+
+/* Custom styles */
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-800 min-h-screen;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-4 py-2 rounded-md font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-primary-hover);
+  }
+  
+  .btn-secondary {
+    background-color: var(--color-secondary);
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--color-secondary-hover);
+  }
+  
+  .btn-accent {
+    background-color: var(--color-accent);
+    color: white;
+  }
+  
+  .btn-accent:hover {
+    background-color: var(--color-accent-hover);
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Animation */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
